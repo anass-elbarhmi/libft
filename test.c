@@ -1,25 +1,44 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   test.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ael-barh <ael-barh@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/14 10:59:44 by ael-barh          #+#    #+#             */
+/*   Updated: 2026/10/14 11:00:51 by ael-barh         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 #include <stdio.h>
 #include <ctype.h>
 
-//int	ft_isprint(int c)
-//{
-//	if (c >= 32 && c <= 126)
-//	{
-//		return (1);
-//	}
-//	return (0);
-//}
+void *ft_memset(void *s, int c, size_t n)
+{
+	size_t	i;
 
+	i = 0;
+	
+	while (i < n)
+	{
+		((char *)s)[i] = c;
+		i++;
+	}
+	return	s;
+}
 
 int	main(void)
 {
-	size_t c;
-
-	c = -50;
+	size_t i = 0;
+	char str[] = "anasssssssssssssss";
+	ft_memset(str, '1', 10);
+	while (str[i])
+	{
+		printf("%c",str[i]);
+		i++;
+	}
 	
-	printf("%zu\n",c);
-	//printf("%d\n",ft_isprint(c));
-	////printf("%d",isprint(c));
 
+	return 0;
 }
