@@ -31,17 +31,10 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
 
 int	main(void)
 {
-	size_t i = 0;
-	//char *p = NULL;
-	char dest[] = "wwwwwwww";
-	char src[] = "bbbbb";
-	//ft_memcpy(dest, src, 10);
-	memcpy(dest, src, 2);
-	while (dest[i])
-	{
-		printf("%c",dest[i]);
-		i++;
-	}
-	printf("\n");
-	return 0;
+	char	dest[20] = "wwwwwwwwww";
+	char	src[] = "Hello";
+
+	ft_memcpy(dest, src, 5);
+	printf("%s\n", dest);
+	return (0);
 }
