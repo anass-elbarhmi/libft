@@ -1,44 +1,34 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: ael-barh <ael-barh@student.1337.ma>        +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/14 10:59:44 by ael-barh          #+#    #+#             */
-/*   Updated: 2026/10/14 11:00:51 by ael-barh         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+
 
 #include <unistd.h>
 #include <stdio.h>
 #include <ctype.h>
+#include <string.h>
 
-void *ft_memset(void *s, int c, size_t n)
+void *ft_memcpy(void *dest, const void *src, size_t n)
 {
-	size_t	i;
+	size_t i;
 
 	i = 0;
-	
-	while (i < n)
+	while (((unsigned char *)src)[i] &&  i < n)
 	{
-		((char *)s)[i] = c;
+		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
 		i++;
 	}
-	return	s;
+	return (dest);
 }
 
 int	main(void)
 {
 	size_t i = 0;
-	char str[] = "anasssssssssssssss";
-	ft_memset(str, '1', 10);
-	while (str[i])
+
+	char dest[] = "aaaaaa";
+	char src[] = "bbbbbb";
+	ft_memcpy(dest, src, 10);
+	while (dest[i])
 	{
-		printf("%c",str[i]);
+		printf("%c",dest[i]);
 		i++;
 	}
-	
-
 	return 0;
 }
