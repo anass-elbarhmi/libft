@@ -6,7 +6,7 @@
 /*   By: ael-barh <ael-barh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 11:00:01 by ael-barh          #+#    #+#             */
-/*   Updated: 2026/10/14 11:10:43 by ael-barh         ###   ########.fr       */
+/*   Updated: 2026/10/14 11:11:51 by ael-barh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memset(void *s, int c, size_t n)
 	ptr = s;
 	while (i < n)
 	{
-		ptr[i] = (unsigned char)c;
+		ptr[i] = c;
 		i++;
 	}
 	return (s);
