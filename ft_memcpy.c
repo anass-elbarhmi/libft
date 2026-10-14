@@ -1,12 +1,17 @@
 #include <string.h>
 
-void *memcpy(void *dest, const void *src, size_t n)
+void *ft_memcpy(void *dest, const void *src, size_t n)
 {
 	size_t i;
 	unsigned char p[n];
 
+	if ((dest == NULL) && (src == NULL))
+	{
+		return (NULL);
+	}
+	
 	i = 0;
-	while (((unsigned char *)src)[i] &&  i < n)
+	while (i < n)
 	{
 		p[i] = ((unsigned char *)src)[i];
 		i++;
@@ -15,7 +20,7 @@ void *memcpy(void *dest, const void *src, size_t n)
 	while (i < n)
 	{
 		((unsigned char *)dest)[i] = p[i];
+		i++;
 	}
-	
 	return (dest);
 }
