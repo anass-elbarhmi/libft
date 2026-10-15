@@ -6,13 +6,13 @@
 /*   By: ael-barh <ael-barh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 09:22:55 by ael-barh          #+#    #+#             */
-/*   Updated: 2026/10/14 09:28:12 by ael-barh         ###   ########.fr       */
+/*   Updated: 2026/10/15 12:24:25 by ael-barh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-size_t	strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
 	size_t	len;
 
