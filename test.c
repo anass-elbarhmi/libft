@@ -3,17 +3,15 @@
 #include <ctype.h>
 #include <string.h>
 
-
-void *ft_memcpy(void *dest, const void *src, size_t n)
+void *ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t i;
-	unsigned char p[n];
+	size_t	i;
+	unsigned  char p[n];
 
 	if ((dest == NULL) && (src == NULL))
 	{
 		return (NULL);
 	}
-	
 	i = 0;
 	while (i < n)
 	{
@@ -26,6 +24,7 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
 		((unsigned char *)dest)[i] = p[i];
 		i++;
 	}
+	
 	return (dest);
 }
 
@@ -34,7 +33,7 @@ int	main(void)
 	char	dest[20] = "wwwwwwwwww";
 	char	src[] = "Hello";
 
-	ft_memcpy(dest, src, 5);
+	ft_memmove(dest, src, 5);
 	printf("%s\n", dest);
 	return (0);
 }
