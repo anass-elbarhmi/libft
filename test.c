@@ -27,13 +27,20 @@ void *ft_memmove(void *dest, const void *src, size_t n)
 	
 	return (dest);
 }
-
+//kkkkkkk
 int	main(void)
-{
-	char	dest[20] = "wwwwwwwwww";
-	char	src[] = "Hello";
+{	
+	char	dest[20] = "www";
+	char	src[6] = "Hel\0lo";
+	int i = 0;
 
 	ft_memmove(dest, src, 5);
-	printf("%s\n", dest);
+	//write(1,&dest[4],1);
+	while (i < 5)
+	{
+		write(1,&dest[i],1);
+		
+		i++;
+	}
 	return (0);
 }
