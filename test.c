@@ -4,20 +4,35 @@
 #include <string.h>
 #include <stdlib.h>
 
-int ft_toupper(int c)
+char *ft_strchr(const char *s, int c)
 {
-	if (c >= 'a' && c <= 'z')
+	size_t i;
+
+	i = 0;
+	while (s[i])
 	{
-		c = c - ('a'-'A');
+		if (s[i] == c)
+		{
+			return (char *)(s+i);
+		}
+		i++;
 	}
-	return (c);
+	if (s[i] == c)
+	{
+		return (char *)(s+i);
+	}
+	return (NULL);
 }
+
 
 int	main(void)
 {	
-	int c = 'a';
-	c = ft_toupper(c);
-	printf("%c",c);
+	char s[]="abcef";
+	char *new;
+	
+
+	new = ft_strchr(s,'a');
+	printf("%s",new);
 	
 	return (0);
 }
