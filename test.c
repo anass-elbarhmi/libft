@@ -5,65 +5,32 @@
 #include <stdlib.h>
 
 
-size_t	ft_strlen(const char *s)
-{
-	size_t	len;
-
-	len = 0;
-	while (s[len])
-	{
-		len++;
-	}
-	return (len);
-}
-char *ft_strchr(const char *s, int c)
+int ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t i;
 
 	i = 0;
-	while (s[i])
+	while (i < n && s1[i] && s2 [i])
 	{
-		if (s[i] == c)
+		if (((const unsigned char *)s1)[i] != ((const unsigned char *)s2)[i])
 		{
-			return (char *)(s+i);
+			return (((const unsigned char *)s1)[i]-((const unsigned char *)s2)[i]);
 		}
 		i++;
 	}
-	if (s[i] == c)
+	if (i == n)
 	{
-		return (char *)(s+i);
+		return (0);
 	}
-	return (NULL);
+	return (((const unsigned char *)s1)[i]-((const unsigned char *)s2)[i]);
 }
-char *ft_strrchr(const char *s, int c)
-{
-	size_t s_len;
-
-	s_len = ft_strlen(s);
-	while (s_len > 0)
-	{
-		if (s[s_len] == (char)c)
-		{
-			return ((char *)(s+s_len));
-		}
-		s_len--;
-	}
-	if (s[s_len] == (char)c)
-	{
-		return ((char *)(s+s_len));
-	}
-	return (NULL);
-}
-
 
 int	main(void)
 {	
-	char s[]="abcaf";
-	char *new;
+	char s1[]="abc";
+	char s2[]="abcde";
 	
-
-	new = ft_strrchr(s,'z');
-	printf("%s",new);
+	printf("%d",ft_strncmp(s1,s2,4));
 	
 	return (0);
 }
