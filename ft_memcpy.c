@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ael-barh <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ael-barh <ael-barh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 21:20:59 by ael-barh          #+#    #+#             */
-/*   Updated: 2026/10/14 21:21:02 by ael-barh         ###   ########.fr       */
+/*   Updated: 2026/10/15 10:54:14 by ael-barh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include <string.h>
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

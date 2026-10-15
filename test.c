@@ -2,45 +2,55 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <string.h>
+#include <stdlib.h>
+
 
 void *ft_memmove(void *dest, const void *src, size_t n)
 {
 	size_t	i;
-	unsigned  char p[n];
+	
 
 	if ((dest == NULL) && (src == NULL))
 	{
 		return (NULL);
 	}
-	i = 0;
-	while (i < n)
+	if (n == 0)
 	{
-		p[i] = ((unsigned char *)src)[i];
-		i++;
-	}
-	i = 0;
-	while (i < n)
-	{
-		((unsigned char *)dest)[i] = p[i];
-		i++;
+		return dest;
 	}
 	
+	if (dest <= src)
+	{
+		while (i < n)
+		{
+			((unsigned char *)dest)[i] = ((unsigned char *)dest)[i];
+			i++;
+		}
+	}
+	else
+	{	i = n-1;
+		while (i > 0)
+		{
+			((unsigned char *)dest)[i] = ((unsigned char *)dest)[i];
+			i--;
+		}
+		((unsigned char *)dest)[i] = ((unsigned char *)dest)[i];
+	}
 	return (dest);
 }
-//kkkkkkk
+
 int	main(void)
 {	
-	char	dest[20] = "www";
-	char	src[6] = "Hel\0lo";
-	int i = 0;
+	char *dest;
+	char *src;
 
+	src = malloc(sizeof(char)*6);
+	dest = src + 2;
+
+	strcpy(src, "abcde");
 	ft_memmove(dest, src, 5);
-	//write(1,&dest[4],1);
-	while (i < 5)
-	{
-		write(1,&dest[i],1);
-		
-		i++;
-	}
+
+	printf("%s",dest);
+	
 	return (0);
 }
