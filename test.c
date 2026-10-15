@@ -43,7 +43,6 @@ int	main(void)
 
 	ft_strlcpy(dst,src,5);
 	
-
 	printf("%s",dst);
 	
 	return (0);
