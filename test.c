@@ -16,32 +16,31 @@ size_t	ft_strlen(const char *s)
 	return (len);
 }
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t i;
+	size_t dst_len;
 	size_t src_len;
-	size_t dest_len;
 
-	i = 0;
+	dst_len = ft_strlen(dst);
 	src_len = ft_strlen(src);
-	while ((i < size-1) && src[i])
+	i = 0;
+	while ((dst_len < size-1) && src[i])
 	{
-		dst[i] = src[i];
+		dst[dst_len] = src[i];
+		dst_len++;
 		i++;
 	}
-	dst[i] == '\0';
-
-	return src_len;
+	dst[dst_len] = '\0';
+	return (dst_len + src_len);
 }
 
 int	main(void)
 {	
-	char dst[5];
+	char dst[20]="ggg";
 	char src[]="anaaaaaaaas";
 
-
-
-	ft_strlcpy(dst,src,5);
+	ft_strlcat(dst,src,20);
 	
 	printf("%s",dst);
 	
