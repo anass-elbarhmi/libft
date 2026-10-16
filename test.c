@@ -1,10 +1,15 @@
 /* main.c */
+#include "libft.h"
 #include <stdio.h>
-
-int	ft_isalpha(int c);      /* the prototype, written by hand here */
+#include <bsd/string.h>
 
 int	main(void)
 {
-	printf("%d\n", ft_isalpha('a'));
+	char s1[]="zzzanasszzzz";
+	char s2[]="anass";
+	char *new;
+
+	new = ft_strnstr(s1, s2, 5);
+	printf("%s",new);
 	return (0);
 }
