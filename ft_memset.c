@@ -6,11 +6,11 @@
 /*   By: ael-barh <ael-barh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/14 11:00:01 by ael-barh          #+#    #+#             */
-/*   Updated: 2026/10/14 11:11:51 by ael-barh         ###   ########.fr       */
+/*   Updated: 2026/10/16 09:58:40 by ael-barh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memset(void *s, int c, size_t n)
 {

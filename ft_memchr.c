@@ -6,11 +6,11 @@
 /*   By: ael-barh <ael-barh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 21:44:56 by ael-barh          #+#    #+#             */
-/*   Updated: 2026/10/15 21:52:43 by ael-barh         ###   ########.fr       */
+/*   Updated: 2026/10/16 09:57:55 by ael-barh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {

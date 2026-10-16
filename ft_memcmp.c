@@ -6,11 +6,11 @@
 /*   By: ael-barh <ael-barh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 22:06:27 by ael-barh          #+#    #+#             */
-/*   Updated: 2026/10/15 22:07:31 by ael-barh         ###   ########.fr       */
+/*   Updated: 2026/10/16 09:58:21 by ael-barh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
@@ -26,3 +26,4 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (0);
 }
+	
