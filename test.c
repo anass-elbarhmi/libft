@@ -1,15 +1,11 @@
 /* main.c */
 #include "libft.h"
 #include <stdio.h>
-#include <bsd/string.h>
+
 
 int	main(void)
 {
-	char s1[]="zzzanasszzzz";
-	char s2[]="anass";
-	char *new;
-
-	new = ft_strnstr(s1, s2, 5);
-	printf("%s",new);
+	char s1[]=" -2147483648";
+	printf("%d",ft_atoi(s1));
 	return (0);
 }
