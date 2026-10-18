@@ -6,7 +6,7 @@
 /*   By: ael-barh <ael-barh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/18 10:37:11 by ael-barh          #+#    #+#             */
-/*   Updated: 2026/10/18 10:38:13 by ael-barh         ###   ########.fr       */
+/*   Updated: 2026/10/18 11:49:13 by ael-barh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,4 +25,4 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ft_strlcpy(joined, s1, total + 1);
 	ft_strlcat(joined, s2, total + 1);
 	return (joined);
-}
+}	
