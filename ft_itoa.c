@@ -2,6 +2,20 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+int ft_count_len(long n)
+{
+	int len = 1;
+	if (n < 0)
+	{
+		n = -n;
+		len++;
+	}
+	while ((n > 0))
+	{
+		n = n / 10;
+		len++;
+	}
+}
 char *ft_itoa(int n)
 {
 	long nb;
