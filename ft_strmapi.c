@@ -1,6 +1,12 @@
 #include "libft.h"
 #include <stdlib.h> 
+#include <stdio.h>
 
+//char ft_incr(unsigned int n, char c)
+//{
+//	c = c + 1;
+//	return c;
+//}
 char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	int i;
@@ -22,5 +28,6 @@ char *ft_strmapi(char const *s, char (*f)(unsigned int, char))
 }
 int main(void)
 {
-	
+	char s[] = "aaaaaa";
+	printf("%s",ft_strmapi(s,ft_incr));
 }
