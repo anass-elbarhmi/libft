@@ -7,13 +7,16 @@
 int	main(void)
 {
 	int x;
+	int y;
 	int *p = &x;
-
+	int *p2 = &y;
 	x = 5;
+	y = 6;
 	t_list *lst;
 	lst = ft_lstnew(p);
-	//printf("%d",(*((int *)(lst->content))));
-	printf("%p",lst->next);
-	
+	t_list *node = ft_lstnew(p2);
+	ft_lstadd_front(&lst,node);
+
+	printf("%d",*((int *)(lst->next->content)));
 	return (0);
 }
