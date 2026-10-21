@@ -47,5 +47,8 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
+/*Part 3: linked lists */
+t_list *ft_lstnew(void *content);
+
 
 #endif 

@@ -6,7 +6,14 @@
 
 int	main(void)
 {
-	
+	int x;
+	int *p = &x;
+
+	x = 5;
+	t_list *lst;
+	lst = ft_lstnew(p);
+	//printf("%d",(*((int *)(lst->content))));
+	printf("%p",lst->next);
 	
 	return (0);
 }
