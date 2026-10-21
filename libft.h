@@ -3,6 +3,12 @@
 
 #include <stddef.h>
 
+typedef struct s_list
+{
+	void *content;
+	struct s_list *next;
+} t_list;
+
 /* Part 1: libc */
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

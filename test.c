@@ -6,7 +6,7 @@
 
 int	main(void)
 {
-	write(1,"anass\n",6);
-	write(2,"ana",3);
+	
+	
 	return (0);
 }
