@@ -16,6 +16,7 @@ int	main(void)
 	lst = ft_lstnew(p);
 	t_list *node = ft_lstnew(p2);
 	ft_lstadd_front(&lst,node);
-	int size = ft_lstsize(lst);
-	printf("%d",size);
+	t_list *last;
+	last = ft_lstlast(lst);
+	printf("%d", *((int *)(last->content)));
 }
