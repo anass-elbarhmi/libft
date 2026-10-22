@@ -7,7 +7,6 @@ void ft_lstiter(t_list *lst, void (*f)(void *))
 	{
 		return;
 	}
-
 	while (lst)
 	{
 		f(lst->content);
