@@ -6,7 +6,7 @@
 
 int	main(void)
 {
-	char *s;
+	char *s  = "anass";
 	int len;
 
 	len = ft_strlen(s);
