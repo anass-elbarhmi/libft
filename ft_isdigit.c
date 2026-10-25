@@ -6,13 +6,13 @@
 /*   By: ael-barh <ael-barh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/13 15:37:32 by ael-barh          #+#    #+#             */
-/*   Updated: 2026/10/16 09:57:29 by ael-barh         ###   ########.fr       */
+/*   Updated: 2026/10/25 11:59:32 by ael-barh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	isdigit(int c)
+int	ft_isdigit(int c)
 {
 	if (c >= 0 && c <= 9)
 	{

@@ -3,10 +3,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <ctype.h>
 
 
 int	main(void)
-{
-	int c = '3';
-	printf("%d",ft_isalpha(c));
+{	
+	int c = 10;
+	printf("%d",ft_isdigit(c));
 }
