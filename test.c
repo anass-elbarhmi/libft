@@ -8,6 +8,20 @@
 
 int	main(void)
 {	
-	int c = 10;
-	printf("%d",ft_isdigit(c));
+	int i = -1 ;
+	printf("my function :\n");
+	while (i < 256)
+	{
+		printf("%d\n",ft_isalpha(i));
+		i++;	
+	}
+	i = 0;
+	printf("real function:\n");
+	while (i < 256)
+	{
+		printf("%d\n",isalpha(i));	
+		i++;
+	}
+	
+	return 0;
 }
