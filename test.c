@@ -5,23 +5,24 @@
 #include <unistd.h>
 #include <ctype.h>
 
+void my_memset(void *s, int c, size_t n)
+{
+	size_t i;
 
-int	main(void)
-{	
-	int i = -1 ;
-	printf("my function :\n");
-	while (i < 256)
-	{
-		printf("%d\n",ft_isalpha(i));
-		i++;	
-	}
 	i = 0;
-	printf("real function:\n");
-	while (i < 256)
+	while (i < n)
 	{
-		printf("%d\n",isalpha(i));	
+		((unsigned char *)s)[i] = c;
 		i++;
 	}
-	
+
+}
+
+int main(void)
+{
+	char s[] = "an";
+	my_memset(s, '1', 3);
+	printf("%s",s);
+
 	return 0;
 }
