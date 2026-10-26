@@ -6,13 +6,12 @@
 /*   By: ael-barh <ael-barh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 13:14:45 by ael-barh          #+#    #+#             */
-/*   Updated: 2026/10/17 13:16:41 by ael-barh         ###   ########.fr       */
+/*   Updated: 2026/10/26 17:18:41 by ael-barh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
-#include <stdint.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
@@ -23,7 +22,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		nmemb = 1;
 		size = 1;
 	}
-	if (nmemb > (SIZE_MAX / size))
+	if (nmemb > ((size_t)-1 / size))
 	{
 		return (NULL);
 	}

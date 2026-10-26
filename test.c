@@ -5,43 +5,29 @@
 #include <unistd.h>
 #include <ctype.h>
 
-char *my_strnstr(const char *big, const char *little, size_t len)
-{
-	size_t i_init;
-	size_t i;
 
-	i = 0;
-	i_init = 0;
-	if (little[0] == '\0')
-		return ((char *)big);
-	while (big[i_init] && i_init < len)
+void *my_calloc(size_t nmemb, size_t size)
+{
+	void *p;
+	if (size == 0 || nmemb)
 	{
-		i = 0;
-		if (big[i_init] == little[i])
-		{
-			while (little[i] && (i_init+i) < len && (big[i_init + i] == little[i]))
-			{
-				i++;
-			}
-			if (little[i] == '\0')
-			{
-				return (char *)(big + i_init);
-			}
-		}
-		i_init++;
+		nmemb = 1;
+		size = 1;
 	}
-	return NULL;
+	if (size > ((size_t)-1)/nmemb)
+	{
+		return NULL;
+	}
 }
 
 int main(void)
 {
-	char s1[] = "abcdef";
-	char s2[] = "cde";
-	char *new;
+	char s1[] = "2147483648";
+	int n;
 	// char dest[] = "elbarhmi" ;
 
-	new = my_strnstr(s1, s2, 3);
-	printf("%s", new);
+	n = ft_atoi(s1);
+	printf("%d", n);
 
 	return 0;
 }
