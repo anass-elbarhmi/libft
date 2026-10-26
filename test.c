@@ -5,57 +5,43 @@
 #include <unistd.h>
 #include <ctype.h>
 
-size_t my_strlcpy(char *dst, char const *src, size_t n)
+char *my_strnstr(const char *big, const char *little, size_t len)
 {
+	size_t i_init;
 	size_t i;
 
 	i = 0;
-	if (n == 0)
+	i_init = 0;
+	if (little[0] == '\0')
+		return ((char *)big);
+	while (big[i_init] && i_init < len)
 	{
-		return ft_strlen(src);
+		i = 0;
+		if (big[i_init] == little[i])
+		{
+			while (little[i] && (i_init+i) < len && (big[i_init + i] == little[i]))
+			{
+				i++;
+			}
+			if (little[i] == '\0')
+			{
+				return (char *)(big + i_init);
+			}
+		}
+		i_init++;
 	}
-	while (i < (n - 1) && src[i])
-	{
-		dst[i] = src[i];
-		i++;
-	}
-	dst[i] = '\0';
-	return ft_strlen(src);
-}
-size_t my_strlcat(char *dest, char const *src, size_t size)
-{
-	size_t dest_len;
-	size_t src_len;
-	size_t i;
-
-	dest_len = ft_strlen(dest);
-	src_len = ft_strlen(src);
-	i = 0;
-	if (size == 0)
-	{
-		return src_len;
-	}
-	if (size <= dest_len)
-	{
-		return (size + src_len);
-	}
-	while ((i + dest_len) < (size - 1) && src[i])
-	{
-		dest[i + dest_len] = src[i];
-		i++;
-	}
-	dest[i + dest_len] = '\0';
-	return (src_len + dest_len);
+	return NULL;
 }
 
 int main(void)
 {
-	char s[20] = "abcdef";
-	char s2[] = "anassssssd";
+	char s1[] = "abcdef";
+	char s2[] = "cde";
+	char *new;
 	// char dest[] = "elbarhmi" ;
 
-	my_strlcat(s, s2, 15);
-	printf("%s", s);
+	new = my_strnstr(s1, s2, 3);
+	printf("%s", new);
 
 	return 0;
 }
