@@ -26,10 +26,11 @@ size_t	my_strlcpy(char *dst, char const *src, size_t n)
 
 int main(void)
 {
-	char s[] = "abcdef";
+	char s[20] = "abcdef";
+	char s2[] = "anassssssd";
 	//char dest[] = "elbarhmi" ;
 
-	my_memcpy(s+1,s,3);
+	my_strlcpy(s,s2,8);
 	printf("%s",s);
 
 	return 0;

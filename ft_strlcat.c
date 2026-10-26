@@ -6,12 +6,11 @@
 /*   By: ael-barh <ael-barh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 16:10:18 by ael-barh          #+#    #+#             */
-/*   Updated: 2026/10/16 09:59:10 by ael-barh         ###   ########.fr       */
+/*   Updated: 2026/10/26 13:22:51 by ael-barh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
