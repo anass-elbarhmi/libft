@@ -6,7 +6,7 @@
 /*   By: ael-barh <ael-barh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/18 14:39:28 by ael-barh          #+#    #+#             */
-/*   Updated: 2026/10/18 14:41:01 by ael-barh         ###   ########.fr       */
+/*   Updated: 2026/10/27 16:32:50 by ael-barh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	end;
 	char	*new;
 
+	if (!s1 || !set)
+		return (NULL);
 	start = 0;
 	end = ft_strlen(s1);
 	while (s1[start] && is_in_set(s1[start], set))
