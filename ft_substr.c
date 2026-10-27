@@ -6,7 +6,7 @@
 /*   By: ael-barh <ael-barh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 13:47:44 by ael-barh          #+#    #+#             */
-/*   Updated: 2026/10/27 15:11:47 by ael-barh         ###   ########.fr       */
+/*   Updated: 2026/10/27 15:19:26 by ael-barh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub = (char *)malloc(sizeof(char) * len + 1);
 	if (!sub)
 		return (NULL);
-	while (i < len && s[start])
+	while (i < len)
 	{
 		sub[i] = s[start + i];
 		i++;
