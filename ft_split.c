@@ -6,7 +6,7 @@
 /*   By: ael-barh <ael-barh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 11:38:13 by ael-barh          #+#    #+#             */
-/*   Updated: 2026/10/27 16:43:39 by ael-barh         ###   ########.fr       */
+/*   Updated: 2026/10/27 16:54:52 by ael-barh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ static char	**words_alloc(char const *s, char sep, size_t n, char **p)
 			word_len++;
 			j++;
 		}
-		p[i] = (char *)malloc(sizeof(char) * (word_len + 1));
+		p[i] = (char *)malloc(word_len + 1);
 		if (!p[i])
 			return (ft_free(p, i));
 		p[i][word_len] = '\0';
