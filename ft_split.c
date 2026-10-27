@@ -6,7 +6,7 @@
 /*   By: ael-barh <ael-barh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 11:38:13 by ael-barh          #+#    #+#             */
-/*   Updated: 2026/10/27 16:41:57 by ael-barh         ###   ########.fr       */
+/*   Updated: 2026/10/27 16:43:39 by ael-barh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,16 +109,13 @@ char	**ft_split(char const *s, char sep)
 {
 	size_t	count_words;
 	char	**p;
-	
+
 	if (!s)
 		return (NULL);
 	count_words = ft_count_words(s, sep);
 	p = (char **)malloc(sizeof(char *) * (count_words + 1));
 	if (!p)
-	{
-		free(p);
 		return (NULL);
-	}
 	p[count_words] = NULL;
 	p = words_alloc(s, sep, count_words, p);
 	if (!p)
