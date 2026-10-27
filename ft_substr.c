@@ -6,7 +6,7 @@
 /*   By: ael-barh <ael-barh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 13:47:44 by ael-barh          #+#    #+#             */
-/*   Updated: 2026/10/27 15:09:31 by ael-barh         ###   ########.fr       */
+/*   Updated: 2026/10/27 15:11:47 by ael-barh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 
 	if (!s)
-	{
 		return (NULL);
-	}
 	i = 0;
 	if (start >= ft_strlen(s))
 		len = 0;

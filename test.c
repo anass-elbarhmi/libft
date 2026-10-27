@@ -36,19 +36,10 @@ char *ft_substr(char const *s, unsigned int start,size_t len)
 	new[i] = '\0';
 
 	return new;
-	
-	
-	
+
 }
 
 int main(void)
 {
-	char buf[8];
-
-	my_memset(buf, 'h', 1);
-	my_memset(buf+1, 'e', 1);
-	my_memset(buf+2, 'l', 1);
-	my_memset(buf+3, 'o', 1);
-	my_memset(buf+4, 0, 1);
-	printf("%s", buf);
+	
 }
