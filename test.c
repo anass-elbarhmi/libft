@@ -6,10 +6,15 @@
 #include <ctype.h>
 #include <limits.h>
 
-void ft_lstadd_front(t_list **lst, t_list *new)
+int ft_lstsize(t_list *lst)
 {
-	new->next = *lst;
-	*lst = new;
+	int i = 0;
+	while (lst)
+	{
+		i++;
+		lst = lst->next;
+	}
+	return i;
 }
 
 int main(void)

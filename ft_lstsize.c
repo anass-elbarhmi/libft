@@ -6,15 +6,15 @@
 /*   By: ael-barh <ael-barh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/22 10:57:15 by ael-barh          #+#    #+#             */
-/*   Updated: 2026/10/22 10:57:16 by ael-barh         ###   ########.fr       */
+/*   Updated: 2026/10/28 20:46:35 by ael-barh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
-	int size;
+	int	size;
 
 	size = 0;
 	while (lst)
@@ -22,5 +22,5 @@ int ft_lstsize(t_list *lst)
 		size++;
 		lst = lst->next;
 	}
-	return size;
+	return (size);
 }
