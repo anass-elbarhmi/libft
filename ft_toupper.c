@@ -6,15 +6,13 @@
 /*   By: ael-barh <ael-barh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/15 16:27:12 by ael-barh          #+#    #+#             */
-/*   Updated: 2026/10/15 16:27:20 by ael-barh         ###   ########.fr       */
+/*   Updated: 2026/10/28 21:37:25 by ael-barh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
 	if (c >= 'a' && c <= 'z')
-	{
-		c = c - ('a'-'A');
-	}
+		c = c - ('a' - 'A');
 	return (c);
 }
