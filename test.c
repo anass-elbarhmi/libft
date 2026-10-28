@@ -6,24 +6,14 @@
 #include <ctype.h>
 #include <limits.h>
 
-void ft_lstadd_back(t_list **lst, t_list *new)
+void ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	t_list *head;
-
-	if (!lst || !new)
-	{
-		return NULL;
-	}
-	head = *lst;
-	while (head->next)
-	{
-		head = head->next;
-	}
-	head->next = new;
+	del(lst->content);
+	free(lst);
 }
 
 int main(void)
 {
-	
+
 	return (0);
 }
