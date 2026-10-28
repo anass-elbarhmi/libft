@@ -6,15 +6,13 @@
 #include <ctype.h>
 #include <limits.h>
 
-int ft_lstsize(t_list *lst)
+t_list *ft_lstlast(t_list *lst)
 {
-	int i = 0;
-	while (lst)
+	while (lst->next)
 	{
-		i++;
 		lst = lst->next;
 	}
-	return i;
+	return lst;
 }
 
 int main(void)
