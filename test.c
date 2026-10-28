@@ -6,57 +6,21 @@
 #include <ctype.h>
 #include <limits.h>
 
-static int	ft_count_len(long n)
+t_list my_lstnew(void *content)
 {
-	int	len;
+	t_list *new;
 
-	len = 0;
-	if (n <= 0)
-	{
-		len++;
-	}
-	while (n != 0)
-	{
-		len++;
-		n = n / 10;
-	}
-	return (len);
-}
+	new = (t_list *)malloc(sizeof(t_list));
+	if (!new)
+		return NULL;
+	new->content = content;
+	new->next = NULL;
 
-char	*ft_itoa(int n)
-{
-	long	nb;
-	int		len;
-	char	*p;
-
-	nb = n;
-	len = ft_count_len(nb);
-	p = (char *)malloc(sizeof(char) * (len + 1));
-	if (!p)
-		return (NULL);
-	p[len] = '\0';
-	if (nb == 0)
-	{
-		p[0] = '0';
-	}
-	if (nb < 0)
-	{
-		p[0] = '-';
-		nb = -nb;
-	}
-	while (nb > 0)
-	{
-		p[--len] = (nb % 10) + '0';
-		nb = nb / 10;
-	}
-	return p;
+	return new;
 }
 
 int main(void)
 {
-	int nb = -42;
-	char *p;
-	p = ft_itoa(nb);
-	printf("%d",ft_count_len(nb));
-	printf("%s",p);
+	
+	return (0);
 }
