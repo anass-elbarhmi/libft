@@ -6,43 +6,57 @@
 #include <ctype.h>
 #include <limits.h>
 
-char *ft_substr(char const *s, unsigned int start,size_t len)
+static int	ft_count_len(long n)
 {
-	char *new;
-	size_t i;
+	int	len;
 
-	i = 0;
-	if (!s)
+	len = 0;
+	if (n <= 0)
 	{
-		return NULL;
+		len++;
 	}
-	if (start >= ft_strlen(s))
+	while (n != 0)
 	{
-		len = 0;
+		len++;
+		n = n / 10;
 	}
-	else if (len > (ft_strlen(s) - start))
-	{
-		len = ft_strlen(s) - start;
-	}
-	new = (char *)malloc(len + 1);
-	if (!new)
-		return NULL;
-	while (i < len && s[start])
-	{
-		new[i] = s[start];
-		i++;
-		start++;
-	}
-	new[i] = '\0';
+	return (len);
+}
 
-	return new;
+char	*ft_itoa(int n)
+{
+	long	nb;
+	int		len;
+	char	*p;
 
+	nb = n;
+	len = ft_count_len(nb);
+	p = (char *)malloc(sizeof(char) * (len + 1));
+	if (!p)
+		return (NULL);
+	p[len] = '\0';
+	if (nb == 0)
+	{
+		p[0] = '0';
+	}
+	if (nb < 0)
+	{
+		p[0] = '-';
+		nb = -nb;
+	}
+	while (nb > 0)
+	{
+		p[--len] = (nb % 10) + '0';
+		nb = nb / 10;
+	}
+	return p;
 }
 
 int main(void)
 {
-	char *s = NULL;
-	char *sub;
-	sub = ft_substr(s, 3, 3);
-	printf("%s",sub);
+	int nb = -42;
+	char *p;
+	p = ft_itoa(nb);
+	printf("%d",ft_count_len(nb));
+	printf("%s",p);
 }
