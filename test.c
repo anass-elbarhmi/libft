@@ -6,13 +6,20 @@
 #include <ctype.h>
 #include <limits.h>
 
-t_list *ft_lstlast(t_list *lst)
+void ft_lstadd_back(t_list **lst, t_list *new)
 {
-	while (lst->next)
+	t_list *head;
+
+	if (!lst || !new)
 	{
-		lst = lst->next;
+		return NULL;
 	}
-	return lst;
+	head = *lst;
+	while (head->next)
+	{
+		head = head->next;
+	}
+	head->next = new;
 }
 
 int main(void)
