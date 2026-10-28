@@ -6,17 +6,15 @@
 /*   By: ael-barh <ael-barh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 09:59:48 by ael-barh          #+#    #+#             */
-/*   Updated: 2026/10/16 09:59:49 by ael-barh         ###   ########.fr       */
+/*   Updated: 2026/10/28 21:39:21 by ael-barh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')
-	{
-		c = c + ('a'-'A');
-	}
+		c = c + ('a' - 'A');
 	return (c);
 }
