@@ -6,17 +6,10 @@
 #include <ctype.h>
 #include <limits.h>
 
-t_list my_lstnew(void *content)
+void ft_lstadd_front(t_list **lst, t_list *new)
 {
-	t_list *new;
-
-	new = (t_list *)malloc(sizeof(t_list));
-	if (!new)
-		return NULL;
-	new->content = content;
-	new->next = NULL;
-
-	return new;
+	new->next = *lst;
+	*lst = new;
 }
 
 int main(void)
