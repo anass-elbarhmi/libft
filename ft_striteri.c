@@ -6,7 +6,7 @@
 /*   By: ael-barh <ael-barh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/20 22:17:01 by ael-barh          #+#    #+#             */
-/*   Updated: 2026/10/20 22:19:06 by ael-barh         ###   ########.fr       */
+/*   Updated: 2026/10/29 10:30:34 by ael-barh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	int	i;
-	int	len;
+	unsigned int	i;
 
+	if (!s || !f)
+		return ;
 	i = 0;
-	len = ft_strlen(s);
-	while (i < len)
+	while (s[i])
 	{
 		f(i, &s[i]);
 		i++;
