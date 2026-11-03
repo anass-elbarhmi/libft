@@ -6,7 +6,7 @@
 /*   By: ael-barh <ael-barh@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 09:58:32 by ael-barh          #+#    #+#             */
-/*   Updated: 2026/11/03 11:39:15 by ael-barh         ###   ########.fr       */
+/*   Updated: 2026/11/03 11:39:49 by ael-barh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,4 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	}
 	return (dest);
 }
-//hhhhhhjnjqnjcnjqnj n
+//hhhhhhjnjqnjcnjqnj nwwwwwwwww
