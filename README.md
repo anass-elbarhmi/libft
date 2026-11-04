@@ -4,7 +4,7 @@
 
 > Your first own C library: re-build the standard functions you use every day, understand how they work under the hood, and create the toolbox you will reuse in every future 42 project.
 
----
+-------
 
 ## Table of Contents
 
